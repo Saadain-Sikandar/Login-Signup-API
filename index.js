@@ -9,10 +9,10 @@ app.use(express.json());
 app.use(cors());
 
 const PORT = 5000;
-const MONGOOSe_URI = `mongodb+srv://admin:admin123@cluster0.s66lzlj.mongodb.net/`;
+const MONGOOSE_URI = `mongodb+srv://admin:admin123@cluster0.s66lzlj.mongodb.net/`;
 
 mongoose
-  .connect(MONGOOSe_URI)
+  .connect(MONGOOSE_URI)
   .then((res) => {
     console.log("mongodb Connected.");
   })
