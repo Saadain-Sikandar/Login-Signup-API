@@ -1,9 +1,9 @@
-import express from "express";
-const app = express();
-import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
-import { userModel } from "./Model/Schema.js";
 import cors from "cors";
+import express from "express";
+import mongoose from "mongoose";
+import { userModel } from "./Model/Schema.js";
+const app = express();
 
 app.use(express.json());
 app.use(cors());
@@ -44,7 +44,7 @@ app.post("/api/signup", async (req, res) => {
     const saveData = await userModel.create(userObj);
     res.status(200).json({
       message: "User Created.",
-        saveData,
+        // saveData,
     });
   } catch (error) {
     console.log(error);
